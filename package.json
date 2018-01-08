@@ -1,0 +1,36 @@
+{
+  "name": "react-native-settings-components",
+  "description": "settings components in style of native components (Category Header, Divider, EditText, Picker, Switch)",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "github.com/florianstahr/react-native-settings-components"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "settings",
+    "components",
+    "ios",
+    "android",
+    "header",
+    "divider",
+    "edittext",
+    "picker",
+    "switch"
+  ],
+  "author": "Florian Stahr <mail@florianstahr.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/florianstahr/react-native-settings-components/issues"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react-native-dialogs": "^0.0.21"
+  }
+}
