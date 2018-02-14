@@ -15,6 +15,7 @@ class SettingsEditText extends Component {
         valueProps: PropTypes.object,
         valueStyle: Text.propTypes.style,
         value: PropTypes.string.isRequired,
+        valueFormat: PropTypes.func,
         valuePlaceholder: PropTypes.string,
         negativeButtonTitle: PropTypes.string.isRequired,
         positiveButtonTitle: PropTypes.string.isRequired,
@@ -22,6 +23,7 @@ class SettingsEditText extends Component {
         onSaveValue: PropTypes.func.isRequired,
         disabled: PropTypes.bool,
         iosDialogInputType: PropTypes.string,
+        androidDialogInputType: PropTypes.number,
         androidDialogProps: PropTypes.object,
         touchableProps: PropTypes.object,
     };
@@ -35,9 +37,11 @@ class SettingsEditText extends Component {
         valueProps: {},
         valuePlaceholder: '...',
         valueStyle: {},
+        valueFormat: null,
         dialogDescription: '',
         disabled: false,
         iosDialogInputType: 'plain-text',
+        androidDialogInputType: 1,
         androidDialogProps: {},
         touchableProps: {},
     };
@@ -50,7 +54,7 @@ class SettingsEditText extends Component {
 
         const {disabled, dialogDescription, negativeButtonTitle, positiveButtonTitle, onSaveValue, androidDialogProps,
             containerProps, containerStyle, title, titleProps, titleStyle, valueProps, valueStyle, valuePlaceholder,
-            disabledOverlayStyle, touchableProps, iosDialogInputType, value} = this.props;
+            disabledOverlayStyle, touchableProps, iosDialogInputType, androidDialogInputType, value, valueFormat} = this.props;
 
         return (!disabled) ? <TouchableOpacity {...touchableProps} onPress={() => {
             if(Platform.OS === 'ios') {
@@ -80,6 +84,7 @@ class SettingsEditText extends Component {
                             value = this.trimValue(value);
                             onSaveValue(value);
                         },
+                        type: androidDialogInputType,
                     },
                     ...androidDialogProps
                 });
@@ -89,11 +94,11 @@ class SettingsEditText extends Component {
         }>
             <View {...containerProps} style={[styles.defaultContainerStyle, containerStyle]}>
                 <Text numberOfLines={1} {...titleProps} style={[styles.defaultTitleStyle, titleStyle]}>{title}</Text>
-                <Text numberOfLines={1} {...valueProps} style={[styles.defaultValueStyle, valueStyle]}>{(value) ? value : valuePlaceholder}</Text>
+                <Text numberOfLines={1} {...valueProps} style={[styles.defaultValueStyle, valueStyle]}>{(value) ? (valueFormat ? valueFormat(value): value) : valuePlaceholder}</Text>
             </View>
         </TouchableOpacity> : <View {...containerProps} style={[styles.defaultContainerStyle, containerStyle]}>
             <Text numberOfLines={1} {...titleProps} style={[styles.defaultTitleStyle, titleStyle]}>{title}</Text>
-            <Text numberOfLines={1} {...valueProps} style={[styles.defaultValueStyle, valueStyle]}>{(value) ? value : valuePlaceholder}</Text>
+            <Text numberOfLines={1} {...valueProps} style={[styles.defaultValueStyle, valueStyle]}>{(value) ? (valueFormat ? valueFormat(value): value) : valuePlaceholder}</Text>
             <View style={[{position: "absolute", top: 0, right: 0, bottom: 0, left: 0}, styles.defaultDisabledOverlayStyle, disabledOverlayStyle]}/>
         </View>
     }
