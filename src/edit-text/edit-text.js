@@ -69,7 +69,7 @@ class SettingsEditText extends Component {
                 );
             } else {
                 let dialog = new DialogAndroid();
-                dialog.set({
+                dialog.prompt({
                     title: title,
                     content: dialogDescription,
                     positiveText: positiveButtonTitle,
