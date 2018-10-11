@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "rules": {
+    "strict": 0,
+    "react/prefer-stateless-function": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-curly-brace-presence": 0,
+    "global-require": 0
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersions": 2018
+  },
+  "ecmaFeatures": {
+    "modules": true,
+    "arrowFunctions": true,
+    "classes": true
+  },
+  "env": {
+    "es6": true
+  }
+}
