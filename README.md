@@ -160,10 +160,10 @@ Prop | Description | Type | Default
 `valueProps` | value props except style | `Text` Component Props | `{}`
 `valueStyle` | value style prop | `Text` PropTypes | `{}`
 `value` | value of setting | String | *Required*
-`valuePlaceholder` | placeholder if value is empty | String | `...`
+`valuePlaceholder` | placeholder if value is empty | String | `'...'`
 `negativeButtonTitle` | negative dialog buttons title | String | *Required*
 `positiveButtonTitle` | positive dialog buttons title | String | *Required*
-`dialogDescription` | text explaining what the user should do e.g. | String | `''``
+`dialogDescription` | text explaining what the user should do e.g. | String | `''`
 `onSaveValue` | callback to be invoked when the positive dialog button is pressed | String | *Required*
 `disabled` | whether the settings value should be editable or not | Boolean | `false`
 `iosDialogInputType` | input type of the dialog alert on ios | String | `plain-text`
@@ -184,7 +184,7 @@ Prop | Description | Type | Default
 `valueStyle` | value style prop | `Text` PropTypes | `{}`
 `value` | value of setting | String | *Required*
 `possibleValues` | picker values | Array of objects in format `{label: string, value: string}` | *Required*
-`valuePlaceholder` | placeholder if value is empty | String | `...`
+`valuePlaceholder` | placeholder if value is empty | String | `'...'`
 `negativeButtonTitle` | negative dialog buttons title | String | *Required*
 `positiveButtonTitle` | positive dialog buttons title | String | *Required*
 `dialogDescription` | text explaining what the user should do e.g. | String | `''`

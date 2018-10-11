@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "github.com/florianstahr/react-native-settings-components"
+    "url": "https://github.com/florianstahr/react-native-settings-components.git"
   },
   "keywords": [
     "react",
@@ -20,17 +20,24 @@
     "picker",
     "switch"
   ],
-  "author": "Florian Stahr <mail@florianstahr.com>",
+  "author": {
+    "name": "Florian Stahr",
+    "email": "mail@florianstahr.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/florianstahr/react-native-settings-components/issues"
   },
   "peerDependencies": {
+    "prop-types": "^15.6.2",
     "react": ">=16.0.0",
     "react-native": "*"
   },
   "dependencies": {
-    "prop-types": "^15.6.0",
     "react-native-dialogs": "^0.0.21"
+  },
+  "devDependencies": {
+    "react": "^16.5.2",
+    "react-native": "^0.57.2"
   }
 }

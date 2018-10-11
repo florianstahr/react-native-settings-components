@@ -7,9 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.0.0",
-    "react-native": "0.51.0",
-    "react-native-settings-components": "file:.."
+    "react": "16.5.0",
+    "react-native": "0.57.2",
+    "react-native-settings-components": "file:.yalc/react-native-settings-components"
   },
   "devDependencies": {
     "babel-jest": "22.0.4",
