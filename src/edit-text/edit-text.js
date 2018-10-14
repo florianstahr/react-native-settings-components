@@ -46,6 +46,22 @@ class SettingsEditText extends Component {
         return (val) ? val.trim() : '';
     };
 
+    async renderAndroidDialog(title, dialogDescription, positiveButtonTitle, negativeButtonTitle, onSaveValue){
+
+      const { action, text } = await DialogAndroid.prompt(title, dialogDescription, {
+        defaultValue: (this.value) ? this.value : "",
+        positiveText: positiveButtonTitle,
+        negativeText: negativeButtonTitle
+      });
+
+      if (action === DialogAndroid.actionPositive) {
+          var value = text;
+          value = this.trimValue(value);
+          this.value = value;
+          onSaveValue(value);
+      }
+    }
+
     render() {
 
         const {disabled, dialogDescription, negativeButtonTitle, positiveButtonTitle, onSaveValue, androidDialogProps,
@@ -68,22 +84,7 @@ class SettingsEditText extends Component {
                     (value) ? value : ""
                 );
             } else {
-                let dialog = new DialogAndroid();
-                dialog.set({
-                    title: title,
-                    content: dialogDescription,
-                    positiveText: positiveButtonTitle,
-                    negativeText: negativeButtonTitle,
-                    input: {
-                        prefill: (value) ? value : '',
-                        callback: (value) => {
-                            value = this.trimValue(value);
-                            onSaveValue(value);
-                        },
-                    },
-                    ...androidDialogProps
-                });
-                dialog.show();
+              this.renderAndroidDialog(title, dialogDescription, positiveButtonTitle, negativeButtonTitle, onSaveValue);
             }
         }
         }>
