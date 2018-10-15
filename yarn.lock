@@ -3346,7 +3346,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -4373,10 +4373,10 @@ react-devtools-core@^3.4.0:
     shell-quote "^1.6.1"
     ws "^3.3.1"
 
-react-native-dialogs@^0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/react-native-dialogs/-/react-native-dialogs-0.0.21.tgz#57ea0d0cfcebbbe035e79282e0febca9ef1e6a2c"
-  integrity sha512-yhGf785OUi7Ype9U8aTvJt3N0OMCjjMFf/iP11hbkdAmVbaqyNEFmgvjUrwAUVJ/JrUqb5v8n5Hw903Gzi7r5Q==
+react-native-dialogs@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-dialogs/-/react-native-dialogs-1.0.2.tgz#d16d68cecbd57f74904fb2d58fd846622d5fec9a"
+  integrity sha512-3hH6s67RD6w9MVttqWARnto3wnmSgnwPCzsk4aVaQbFjtgVZQecn+oP+jqj01G6OvxAtuG7aSe62fYGs5xileA==
 
 react-native@^0.57.2:
   version "0.57.2"
