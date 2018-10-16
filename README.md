@@ -237,5 +237,23 @@ const modalStyle = {
 | `trackColor`           | switch track color [see React Native Switch prop `trackColor`](https://facebook.github.io/react-native/docs/switch#trackcolor) | Object                     | `null`     |
 | `switchProps`          | `Switch` component props except the ones mentioned before                                                                      | `Switch` Component Props   | `{}`       |
 
-## Showcase
+### SettingsButton
+
+| Prop                    | Description                                                       | Type                             | Default    |
+|:------------------------|:------------------------------------------------------------------|:---------------------------------|:-----------|
+| `containerProps`        | container props except style                                      | `View` Component Props           | `{}`       |
+| `containerStyle`        | container style prop                                              | ViewPropTypes                    | `{}`       |
+| `disabledOverlayStyle`  | component overlay style if setting is disabled                    | ViewPropTypes                    | `{}`       |
+| `titleProps`            | title props except style                                          | `Text` Component Props           | `{}`       |
+| `titleStyle`            | title style prop                                                  | `Text` PropTypes                 | `{}`       |
+| `title`                 | title of setting                                                  | String                           | *Required* |
+| `descriptionProps`      | description props except style                                    | `Text` Component Props           | `{}`       |
+| `descriptionStyle`      | description style prop                                            | `Text` PropTypes                 | `{}`       |
+| `description`           | description of setting                                            | String                           | null       |
+| `rightIconWrapperStyle` | wrapper style prop of wrapper around rightBtn                     | `View` Component Props           | `{}`       |
+| `rightIcon`             | anything that should be displayed on the right side of the button | Function () => <React.Component> | `null`     |
+| `disabled`              | whether the settings value should be editable or not              | Boolean                          | `false`    |
+| `onPress`               | callback to be invoked when the button is pressed                 | Function (Boolean) => null       | *Required* |
+
+## Showcase - v0.0.1
 ![react-native-settings-components ios screenshot](https://i.imgur.com/5cV48CA.png "Screenshot iOS") ![react-native-settings-components android screenshot](https://i.imgur.com/VKCqNaA.png "Screenshot Android")

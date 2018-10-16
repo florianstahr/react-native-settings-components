@@ -43,7 +43,7 @@ const style = StyleSheet.create({
 
 class SettingsSwitch extends Component {
   static propTypes = {
-    container: PropTypes.object,
+    containerProps: PropTypes.object,
     containerStyle: PropTypes.object,
     disabledOverlayStyle: PropTypes.object,
     titleProps: PropTypes.object,
@@ -65,7 +65,7 @@ class SettingsSwitch extends Component {
   };
 
   static defaultProps = {
-    container: {},
+    containerProps: {},
     containerStyle: {},
     disabledOverlayStyle: {},
     titleProps: {},
@@ -82,13 +82,13 @@ class SettingsSwitch extends Component {
 
   render() {
     const {
-      container, containerStyle, titleProps, titleStyle, title, disabled, switchProps,
+      containerProps, containerStyle, titleProps, titleStyle, title, disabled, switchProps,
       disabledOverlayStyle, switchWrapperProps, switchWrapperStyle, value,
       trackColor, onValueChange, descriptionProps, descriptionStyle, description,
     } = this.props;
 
     return (
-      <View {...container} style={[style.defaultContainerStyle, containerStyle]}>
+      <View {...containerProps} style={[style.defaultContainerStyle, containerStyle]}>
         <View style={style.titleWrapper}>
           <Text
             {...titleProps}
