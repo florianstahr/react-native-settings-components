@@ -1,7 +1,7 @@
 {
   "name": "react-native-settings-components",
   "description": "settings components in style of native components (Category Header, Divider, EditText, Picker, Switch)",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/index.js",
   "repository": {
     "type": "git",
@@ -29,14 +29,23 @@
     "url": "https://github.com/florianstahr/react-native-settings-components/issues"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.2",
+    "prop-types": ">=15.5.0",
     "react": ">=16.0.0",
-    "react-native": "*"
+    "react-native": ">=0.56.0"
   },
   "dependencies": {
-    "react-native-dialogs": "^0.0.21"
+    "lodash": "^4.17.11",
+    "react-native-dialogs": "^1.0.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.3.0",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-native": "^0.57.2"
   }

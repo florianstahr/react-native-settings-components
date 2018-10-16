@@ -55,5 +55,4 @@ buck-out/
 .yalc
 yalc.lock
 
-#vs code
-.vscode/
+example/
