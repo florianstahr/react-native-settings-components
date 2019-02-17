@@ -173,6 +173,24 @@ The same props as [`SettingsCategoryHeader`](#settingscategoryheader)'s props.
 | `androidDialogOptions`   | input dialog options on android (see [`react-native-dialogs`](https://github.com/aakashns/react-native-dialogs))     | String                      | `{}`         |
 | `touchableProps`         | props of touchable opening input dialog                                                                              | String                      | `{}`         |
 
+### SettingsReadOnlyText
+
+| Prop                     | Description                                                                                                          | Type                        | Default      |
+|:-------------------------|:---------------------------------------------------------------------------------------------------------------------|:----------------------------|:-------------|
+| `containerProps`         | container props except style                                                                                         | `View` Component Props      | `{}`         |
+| `containerStyle`         | container style prop                                                                                                 | ViewPropTypes               | `{}`         |
+| `titleProps`             | title props except style                                                                                             | `Text` Component Props      | `{}`         |
+| `titleStyle`             | title style prop                                                                                                     | `Text` PropTypes            | `{}`         |
+| `title`                  | title of setting                                                                                                     | String                      | *Required*   |
+| `descriptionProps`       | description props except style                                                                                       | `Text` Component Props      | `{}`         |
+| `descriptionStyle`       | description style prop                                                                                               | `Text` PropTypes            | `{}`         |
+| `description`            | description of setting                                                                                               | String                      | `null`       |
+| `valueProps`             | value props except style                                                                                             | `Text` Component Props      | `{}`         |
+| `valueStyle`             | value style prop                                                                                                     | `Text` PropTypes            | `{}`         |
+| `value`                  | value of setting                                                                                                     | String                      | *Required*   |
+| `valuePlaceholder`       | placeholder if value is empty                                                                                        | String                      | `...`        |
+
+
 ### SettingsPicker
 
 If you set `multi = true`, you can select multiple options, but you have to set a value of type `Array` instead. See props.
@@ -216,7 +234,25 @@ const modalStyle = {
         scrollView: PropTypes.object,
         innerWrapper: PropTypes.object,
     },
+    item: {
+      itemWrapper: PropTypes.object,
+      indicatorWrapper: PropTypes.object,
+      indicator: PropTypes.object,
+      indicatorSelected: PropTypes.object,
+    },
 };
+```
+
+The simplest way to change the indicator colors:
+```
+item: {
+  indicator: {
+    borderColor: 'green' //Use your color here
+  },
+  indicatorSelected: {
+    backgroundColor: 'green' //Use your color here
+  },
+},
 ```
 
 ### SettingsSwitch

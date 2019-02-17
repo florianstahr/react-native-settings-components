@@ -3,6 +3,7 @@ import {
   View, Text, TouchableOpacity, StyleSheet,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import get from 'lodash/get';
 
 const style = StyleSheet.create({
   itemWrapper: {
@@ -47,6 +48,12 @@ class PickerModalItem extends Component {
     selected: PropTypes.bool.isRequired,
     label: PropTypes.string.isRequired,
     isLast: PropTypes.bool,
+    itemStyle: PropTypes.shape({
+      itemWrapper: PropTypes.object,
+      indicatorWrapper: PropTypes.object,
+      indicator: PropTypes.object,
+      indicatorSelected: PropTypes.object,
+    }),
   };
 
   static defaultProps = {
@@ -55,7 +62,7 @@ class PickerModalItem extends Component {
 
   render() {
     const {
-      onSelect, selected, label, isLast,
+      onSelect, selected, label, isLast, itemStyle
     } = this.props;
     return (
       <React.Fragment>
@@ -63,9 +70,9 @@ class PickerModalItem extends Component {
           activeOpacity={0.6}
           onPress={onSelect}
         >
-          <View style={style.itemWrapper}>
-            <View style={style.indicatorWrapper}>
-              <View style={[style.indicator, { backgroundColor: selected ? 'red' : null }]} />
+          <View style={[style.itemWrapper, get(itemStyle, 'itemWrapper')]}>
+            <View style={[style.indicatorWrapper, get(itemStyle, 'indicatorWrapper')]}>
+              <View style={[style.indicator, { backgroundColor: selected ? 'red' : null }, get(itemStyle, 'indicator')]} />
             </View>
             <View style={style.labelWrapper}>
               <Text style={style.label}>

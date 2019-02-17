@@ -89,6 +89,12 @@ class PickerModal extends Component {
         scrollView: PropTypes.object,
         innerWrapper: PropTypes.object,
       }),
+      item: PropTypes.shape({
+        itemWrapper: PropTypes.object,
+        indicatorWrapper: PropTypes.object,
+        indicator: PropTypes.object,
+        indicatorSelected: PropTypes.object,
+      }),
     }),
     renderCloseBtn: PropTypes.func,
     renderListItem: PropTypes.func,
@@ -122,7 +128,7 @@ class PickerModal extends Component {
   };
 
   renderPickerItem = ({ item, index }) => {
-    const { pickerValue, options, renderListItem } = this.props;
+    const { pickerValue, options, renderListItem, modalStyle } = this.props;
     return isFunction(renderListItem) ? renderListItem({
       item,
       index,
@@ -137,6 +143,7 @@ class PickerModal extends Component {
         selected={pickerValue.indexOf(item.value) !== -1}
         label={item.label}
         value={item.value}
+        itemStyle={get(modalStyle, 'item')}
         isLast={index === options.length - 1}
       />
     );
