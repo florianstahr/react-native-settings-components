@@ -76,6 +76,12 @@ class SettingsPicker extends Component {
         scrollView: PropTypes.object,
         innerWrapper: PropTypes.object,
       }),
+      item: PropTypes.shape({
+        itemWrapper: PropTypes.object,
+        indicatorWrapper: PropTypes.object,
+        indicator: PropTypes.object,
+        indicatorSelected: PropTypes.object,
+      }),
     }),
     multi: PropTypes.bool,
     renderCloseBtn: PropTypes.func,
