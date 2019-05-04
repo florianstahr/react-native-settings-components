@@ -19,7 +19,6 @@ const style = StyleSheet.create({
   indicator: {
     height: 12,
     width: 12,
-    borderColor: 'red',
     borderWidth: 2,
     borderRadius: 6,
     padding: 2,
@@ -47,6 +46,7 @@ class PickerModalItem extends Component {
     selected: PropTypes.bool.isRequired,
     label: PropTypes.string.isRequired,
     isLast: PropTypes.bool,
+    itemColor: PropTypes.string,
   };
 
   static defaultProps = {
@@ -55,7 +55,7 @@ class PickerModalItem extends Component {
 
   render() {
     const {
-      onSelect, selected, label, isLast,
+      onSelect, selected, label, isLast, itemColor,
     } = this.props;
     return (
       <React.Fragment>
@@ -65,7 +65,7 @@ class PickerModalItem extends Component {
         >
           <View style={style.itemWrapper}>
             <View style={style.indicatorWrapper}>
-              <View style={[style.indicator, { backgroundColor: selected ? 'red' : null }]} />
+              <View style={[style.indicator, { borderColor: itemColor || 'red', backgroundColor: selected ? (itemColor || 'red') : null }]} />
             </View>
             <View style={style.labelWrapper}>
               <Text style={style.label}>
