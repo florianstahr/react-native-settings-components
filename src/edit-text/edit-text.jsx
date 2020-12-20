@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   View,
   Platform,
-  AlertIOS,
+  Alert,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import DialogAndroid from 'react-native-dialogs';
@@ -169,7 +169,7 @@ class SettingsEditText extends Component {
       iosDialogInputType, value,
     } = this.props;
     if (Platform.OS === 'ios') {
-      AlertIOS.prompt(
+      Alert.prompt(
         title,
         dialogDescription,
         [
