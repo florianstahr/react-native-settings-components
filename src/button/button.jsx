@@ -57,7 +57,6 @@ class SettingsButton extends Component {
     rightIcon: PropTypes.func,
     disabled: PropTypes.bool,
     onPress: PropTypes.func.isRequired,
-
   };
 
   static defaultProps = {

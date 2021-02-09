@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TextProps, TextStyle, TouchableOpacityProps, View, ViewProps, ViewStyle } from 'react-native'
+import { GestureResponderEvent, TextProps, TextStyle, TouchableOpacityProps, View, ViewProps, ViewStyle } from 'react-native'
 
 interface SettingsDividerShortProps {
 	ios?:boolean,
@@ -146,3 +146,20 @@ interface SettingsSwitchProps {
     switchProps: object,
 }
 type SettingsSwitch = React.Component<SettingsSwitchProps>;
+
+interface SettingsButtonProps {
+	containerProps?: TouchableOpacityProps,
+    containerStyle?: ViewStyle,
+    disabledOverlayStyle?: ViewStyle,
+    titleProps?: TextProps,
+    titleStyle?: TextStyle,
+    title: string,
+    descriptionProps?: TextProps,
+    descriptionStyle?: TextStyle,
+    description?: string,
+    rightIconWrapperStyle?: ViewStyle,
+    rightIcon?: JSX.Element,
+    disabled?: boolean,
+    onPress: (event: GestureResponderEvent) => void,
+}
+type SettingSwitch = React.Component<SettingsButtonProps>;
