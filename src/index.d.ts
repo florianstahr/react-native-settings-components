@@ -106,3 +106,11 @@ interface SettingsPickerProps {
 }
 type SettingsPicker = React.Component<SettingsPickerProps>;
 
+interface SettingCategoryHeaderProps {
+	container?: ViewProps,
+	containerStyle?: ViewStyle,
+	titleProps?: TextProps,
+	titleStyle?: TextStyle,
+	title: string
+}
+type SettingsCategoryHeader = React.Component<SettingCategoryHeaderProps>;
