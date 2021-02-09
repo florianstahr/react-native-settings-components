@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TextProps, TextStyle, TouchableOpacityProps, ViewProps, ViewStyle } from 'react-native'
+import { TextProps, TextStyle, TouchableOpacityProps, View, ViewProps, ViewStyle } from 'react-native'
 
 interface SettingsDividerShortProps {
 	ios?:boolean,
@@ -65,3 +65,44 @@ interface SettingsEditTextProps {
 	touchableProps?: TouchableOpacityProps
 }
 type SettingsEditText = React.Component<SettingsEditTextProps>;
+
+interface SettingsPickerProps {
+	containerProps?: ViewProps,
+    containerStyle?: ViewStyle,
+    disabledOverlayStyle?: ViewStyle,
+    titleProps?: TextProps,
+    titleStyle?: TextStyle,
+    title: string,
+    valueProps?: TextProps,
+    valueStyle?: TextStyle,
+    value?: any,
+    valueFormat?: (input:T<any>)=>T,
+    valuePlaceholder?: string,
+    options: Array<any>, //I honestly don't know how to type this
+    dialogDescription?: string,
+    onValueChange: (value:any)=>void,
+    disabled?: boolean,
+    modalStyle?: {
+      innerWrapper: ViewStyle,
+      header: {
+        titleWrapper: ViewStyle,
+        title: TextStyle,
+        description: TextStyle,
+        closeBtnWrapper: ViewStyle,
+      },
+      list: {
+        wrapper: ViewStyle,
+        scrollView: ViewStyle,
+        innerWrapper: ViewStyle,
+      },
+    },
+    multi?: boolean,
+	renderCloseBtn?: JSX.Element,
+	// ↓↓↓ I'm not gonna read through the code that deeply to type every prop,
+	// ↓↓↓ especially since I won't use SettingsPicker at all in my app.
+	// ↓↓↓ If you want, type it correctly urself
+	renderListItem?: JSX.Element<{any:any}>, 
+    singleRadio?: boolean,
+}
+type SettingsPicker = React.Component<SettingsPickerProps>;
+
