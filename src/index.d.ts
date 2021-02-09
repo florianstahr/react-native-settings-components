@@ -8,22 +8,22 @@ import {
 	ViewStyle
 } from 'react-native'
 
-interface SettingsDividerShortProps {
+export interface SettingsDividerShortProps {
 	ios?:boolean,
 	android?:boolean,
 	containerStyle?:ViewStyle,
 	dividerStyle?:ViewStyle,
 }
-type SettingsDividerShort = React.Component<SettingsDividerShortProps>;
+export declare class SettingsDividerShort extends React.Component<SettingsDividerShortProps> {}
 
-interface SettingsDividerLongProps {
+export interface SettingsDividerLongProps {
 	ios?:boolean,
 	android?:boolean,
 	dividerStyle?:ViewStyle,
 }
-type SettingsDividerLong = React.Component<SettingsDividerLongProps>;
+export declare class SettingsDividerLong extends React.Component<SettingsDividerLongProps> {}
 
-interface SettingsEditTextProps {
+export interface SettingsEditTextProps {
 	containerProps?: ViewProps,
 	containerStyle?: ViewStyle,
 	disabledOverlayStyle?: ViewStyle,
@@ -71,9 +71,9 @@ interface SettingsEditTextProps {
 	androidDialogOptions?: {any:any},
 	touchableProps?: TouchableOpacityProps
 }
-type SettingsEditText = React.Component<SettingsEditTextProps>;
+export declare class SettingsEditText extends React.Component<SettingsEditTextProps> {}
 
-interface SettingsPickerProps {
+export interface SettingsPickerProps {
 	containerProps?: ViewProps,
     containerStyle?: ViewStyle,
     disabledOverlayStyle?: ViewStyle,
@@ -83,7 +83,7 @@ interface SettingsPickerProps {
     valueProps?: TextProps,
     valueStyle?: TextStyle,
     value?: any,
-    valueFormat?: (input:T<any>)=>T,
+    valueFormat?: (input:any)=>any,
     valuePlaceholder?: string,
     options: Array<any>, //I honestly don't know how to type this
     dialogDescription?: string,
@@ -104,34 +104,34 @@ interface SettingsPickerProps {
       },
     },
     multi?: boolean,
-	renderCloseBtn?: JSX.Element,
+	renderCloseBtn?: React.Component,
 	// ↓↓↓ I'm not gonna read through the code that deeply to type every prop,
 	// ↓↓↓ especially since I won't use SettingsPicker at all in my app.
 	// ↓↓↓ If you want, type it correctly urself
-	renderListItem?: JSX.Element<{any:any}>, 
+	renderListItem?: React.Component, 
     singleRadio?: boolean,
 }
-type SettingsPicker = React.Component<SettingsPickerProps>;
+export declare class SettingsPicker extends React.Component<SettingsPickerProps> {}
 
-interface SettingCategoryHeaderProps {
+export interface SettingCategoryHeaderProps {
 	container?: ViewProps,
 	containerStyle?: ViewStyle,
 	titleProps?: TextProps,
 	titleStyle?: TextStyle,
 	title: string
 }
-type SettingsCategoryHeader = React.Component<SettingCategoryHeaderProps>;
+export declare class SettingsCategoryHeader extends React.Component<SettingCategoryHeaderProps> {}
 
-interface SettingsTextLabelProps {
+export interface SettingsTextLabelProps {
 	container?: ViewProps,
 	containerStyle?: ViewStyle,
 	titleProps?: TextProps,
 	titleStyle?: TextStyle,
 	title: string,  
 }
-type SettingsTextLabel = React.Component<SettingsTextLabelProps>;
+export declare class SettingsTextLabel extends React.Component<SettingsTextLabelProps> {}
 
-interface SettingsSwitchProps {
+export interface SettingsSwitchProps {
 	containerProps?: ViewProps,
     containerStyle?: ViewStyle,
     disabledOverlayStyle?: ViewStyle,
@@ -152,9 +152,10 @@ interface SettingsSwitchProps {
     },
     switchProps: object,
 }
-type SettingsSwitch = React.Component<SettingsSwitchProps>;
+export declare class SettingsSwitch extends React.Component<SettingsSwitchProps> {}
 
-interface SettingsButtonProps {
+
+export interface SettingsButtonProps {
 	containerProps?: TouchableOpacityProps,
     containerStyle?: ViewStyle,
     disabledOverlayStyle?: ViewStyle,
@@ -169,4 +170,4 @@ interface SettingsButtonProps {
     disabled?: boolean,
     onPress: (event: GestureResponderEvent) => void,
 }
-type SettingSwitch = React.Component<SettingsButtonProps>;
+export declare class SettingSwitch extends React.Component<SettingsButtonProps> {}
