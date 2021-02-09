@@ -123,3 +123,26 @@ interface SettingsTextLabelProps {
 	title: string,  
 }
 type SettingsTextLabel = React.Component<SettingsTextLabelProps>;
+
+interface SettingsSwitchProps {
+	containerProps?: ViewProps,
+    containerStyle?: ViewStyle,
+    disabledOverlayStyle?: ViewStyle,
+    titleProps?: TextProps,
+    titleStyle?: TextStyle,
+    title: string,
+    descriptionProps?: TextProps,
+    descriptionStyle?: TextStyle,
+    description?: string,
+    switchWrapperProps?: ViewProps,
+    switchWrapperStyle?: ViewStyle,
+    value: boolean,
+    disabled?: boolean,
+    onValueChange: (value: boolean) => void,
+    trackColor?: {
+      true: string,
+      false: string,
+    },
+    switchProps: object,
+}
+type SettingsSwitch = React.Component<SettingsSwitchProps>;
