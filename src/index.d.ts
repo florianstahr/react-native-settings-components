@@ -1,5 +1,12 @@
 import * as React from 'react';
-import { GestureResponderEvent, TextProps, TextStyle, TouchableOpacityProps, View, ViewProps, ViewStyle } from 'react-native'
+import { 
+	GestureResponderEvent, 
+	TextProps, 
+	TextStyle, 
+	TouchableOpacityProps, 
+	ViewProps, 
+	ViewStyle
+} from 'react-native'
 
 interface SettingsDividerShortProps {
 	ios?:boolean,
