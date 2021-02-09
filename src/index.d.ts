@@ -114,3 +114,12 @@ interface SettingCategoryHeaderProps {
 	title: string
 }
 type SettingsCategoryHeader = React.Component<SettingCategoryHeaderProps>;
+
+interface SettingsTextLabelProps {
+	container?: ViewProps,
+	containerStyle?: ViewStyle,
+	titleProps?: TextProps,
+	titleStyle?: TextStyle,
+	title: string,  
+}
+type SettingsTextLabel = React.Component<SettingsTextLabelProps>;
