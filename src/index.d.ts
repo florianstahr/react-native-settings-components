@@ -68,7 +68,7 @@ export interface SettingsEditTextProps {
 	androidDialogPlaceholder?:string,
 	// ↓↓↓ it's from react-native-dialogs package -> DialogAndroid.js -> "type OptionsPrompt" (on 183 line currently)
 	// ↓↓↓ I just don't know how to add it properly
-	androidDialogOptions?: {any:any},
+	androidDialogOptions?: {},
 	touchableProps?: TouchableOpacityProps
 }
 export declare class SettingsEditText extends React.Component<SettingsEditTextProps> {}
