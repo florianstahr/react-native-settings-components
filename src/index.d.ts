@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { 
 	GestureResponderEvent, 
+	SwitchProps,
 	TextProps, 
 	TextStyle, 
 	TouchableOpacityProps, 
@@ -150,7 +151,7 @@ export interface SettingsSwitchProps {
       true: string,
       false: string,
     },
-    switchProps: object,
+    switchProps?: SwitchProps,
 }
 export declare class SettingsSwitch extends React.Component<SettingsSwitchProps> {}
 
@@ -170,4 +171,4 @@ export interface SettingsButtonProps {
     disabled?: boolean,
     onPress: (event: GestureResponderEvent) => void,
 }
-export declare class SettingSwitch extends React.Component<SettingsButtonProps> {}
+export declare class SettingsButton extends React.Component<SettingsButtonProps> {}
